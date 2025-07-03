@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
-import { Toaster } from '@/components/ui/sonner';
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
@@ -38,9 +37,6 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
       </div>
-      
-      {/* 全局通知组件 */}
-      <Toaster position="top-right" />
     </div>
   );
 } 
